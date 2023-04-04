@@ -19,6 +19,22 @@
 </ul>
                 </div>
         </header>
+        
+         <div class="row">
+        <div class="leftside">
+        <p>Leftside</p>
+        </div>
+        <div class="center">
+        <p> Center</p>
+        
+        </div>
+        <div class ="rightside">
+        <p> Rightside</p>
+        </div>
+        
+    </div>
+        
+        
 <form>
         
     <p>Name<input type="name"
@@ -38,6 +54,8 @@
     
     </p>
         </form>
+        
+        
         
         
         

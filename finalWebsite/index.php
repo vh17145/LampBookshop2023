@@ -19,12 +19,26 @@
             </ul>
         </div>
         
+         <div class="row">
+        <div class="leftside">
+        <p>Leftside</p>
+        </div>
+        <div class="center">
         
+        <h1>Lamp Bookshop</h1>
+        </div>
+        <div class ="rightside">
         
-    <h1>About this website</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3 </h3>
-        <p1>Information
+         <h2>New books here</h2>
+        
+        </div>
+        
+    </div>
+        
+    
+      
+             
+            <p1>Information
         <pre>
         
         .

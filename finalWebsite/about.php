@@ -19,10 +19,10 @@
 <body>
     <div class="row">
         <div class="leftside">
-        <p>CGgkddydhuwdhuldihdladhu</p>
+        <p>Leftside</p>
         </div>
         <div class="center">
-        <p> sjdnjfdfefuindsluvdlscvjsdnchfldsfhlsd</p>
+        <p> Center</p>
         
         </div>
         <div class ="rightside">
