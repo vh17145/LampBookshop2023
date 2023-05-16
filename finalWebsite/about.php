@@ -9,6 +9,16 @@
     
 </head>
    
+<body>
+    
+    
+    
+    
+     <div class ="header">
+        
+                <h1>Lamp Bookshop</h1>
+        </div>
+    
     <div class="navbar">
                <ul>
                    <li><a href="index.php">Home</a> </li>
@@ -16,7 +26,6 @@
                 <li><a href="contact.php">Contact</a> </li>
         </ul>
     </div>
-<body>
     <div class="row">
         <div class="leftside">
         <p>Leftside</p>

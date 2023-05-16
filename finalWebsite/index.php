@@ -10,7 +10,10 @@
 </head>
 
     <body>
+        <div class ="header">
         
+                <h1>Lamp Bookshop</h1>
+        </div>
         <div class="navbar">
             <ul>
            <li> <a href="index.php">Home</a> </li>
@@ -25,18 +28,8 @@
         </div>
         <div class="center">
         
-        <h1>Lamp Bookshop</h1>
-        </div>
-        <div class ="rightside">
-        
-         <h2>New books here</h2>
-        
-        </div>
-        
-    </div>
-        
-    
-      
+
+             
              
             <p1>Information
         <pre>
@@ -60,6 +53,17 @@
         
         
         </p1>
+        </div>
+        <div class ="rightside">
+        
+         <h2>New books here</h2>
+        
+        </div>
+        
+    </div>
+        
+    
+     
      
     </body>
     <footer>
