@@ -61,7 +61,7 @@
   <a target="_blank" href="/images/jesusCalling.jpg">
     <img src="/images/jesusCalling.jpg" alt="Jesus Always" width="600" >
   </a>
-  <div class="desc">Jesus Always is a spinoff to the bestseller Jesus Calling.</div>
+  <div class="desc">This is a spinoff to the bestseller Jesus Calling.</div>
 </div>
 
             
