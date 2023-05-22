@@ -8,7 +8,7 @@
     <link href="/LampBookshop2023/finalWebsite/style.css" rel="stylesheet" type="text/css">
      
 </head>
-
+<div class="wrapper">
     <body>
         <div class ="header">
         
@@ -16,7 +16,7 @@
         </div>
         <div class="navbar">
             <ul>
-           
+           <li><a href="gallery.php">Product Gallery</a></li>
              <li><a href="about.php">About our website</a> </li>
          <li><a href="contact.php">Contact</a> </li>
                 <li><a href="index.php">Home</a> </li>
@@ -25,45 +25,75 @@
         
          <div class="row">
         <div class="leftside">
-        <p>Leftside</p>
+            <h3>Welcome to Lamp Books!</h3>
+      
         </div>
-        <div class="center">
-            <h3>Gifts and jewlery</h3>
-        <p></p>
-        </div>
+        
         <div class ="rightside">
         
-         <h2>New books here</h2>
+<div class="slideshowContainer">
+
+<div class="mySlides fade">
+  
+  <img src="images/display1.jpg" style="width:100%">
+  <div class="text">
+      <p>Bible journalling Display</p></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="images/lampExterior.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="images/clothing.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
         
-            
-<div class="gallery">
-  <a target="_blank" href="/images/narnia.jpg">
-    <img src="/images/narnia.jpg" alt="Narnia" width="600" >
-  </a>
-  <div class="desc">Narnia is one of the stores best selling teen books and is high up on the staff reccomendsds list</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="/images/adventureBible.jpg">
-    <img src="/images/adventureBible.jpg" alt="Adventure bible" width="600" >
-  </a>
-  <div class="desc">Another teen classic at Lamp Bookshop is the adventure bible</div>
-</div>
-
-<div class="gallery">
-  <a>
-    <img src="/images/senseAndSensibility.jpg" alt="Sense and sensibility by jane Austen" width="600" >
-  </a>
-  <div class="desc">Sense and sensibility by jane Austen is a new release within lamp books</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="/images/jesusCalling.jpg">
-    <img src="/images/jesusCalling.jpg" alt="Jesus Always" width="600" >
-  </a>
-  <div class="desc">This is a spinoff to the bestseller Jesus Calling.</div>
-</div>
-
+ 
             
             
         </div>
@@ -76,5 +106,5 @@
     </body>
     
 
- 
+    </div>
 </html>

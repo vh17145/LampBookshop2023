@@ -20,9 +20,9 @@
     
             <div class="navbar">
 <ul>
-            
-             <li><a href="about.php">About our website</a></li> 
-         <li><a href="contact.php">Contact</a> </li>
+    <li><a href="gallery.php">Product Gallery</a></li>
+    <li><a href="about.php">About our website</a></li> 
+    <li><a href="contact.php">Contact</a> </li>
     <li><a href="index.php">Home</a> </li>
 </ul>
                 </div>
@@ -33,11 +33,7 @@
             <h3>Lamp contact details</h3>
        
         </div>
-        <div class="center">
-        <h3>Where to find Lamp Bookshop?</h3>
-        
-        
-        </div>
+       
         <div class ="rightside">
             <h3>Customer Newspaper</h3>
         <p> Are you a regular customer? Fillout here to be added to the regulars list and be informed on whats going on at The Lamp.</p>

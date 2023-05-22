@@ -21,9 +21,9 @@
     
     <div class="navbar">
                <ul>
-                  
+        <li><a href="gallery.php">Product Gallery</a></li>          
         <li><a href="about.php">About our website</a></li> 
-                <li><a href="contact.php">Contact</a> </li>
+        <li><a href="contact.php">Contact</a> </li>
                    <li> <a href="index.php">Home</a> </li>
         </ul>
     </div>
@@ -32,11 +32,7 @@
             <h3>History of The Lamp</h3>
         <p></p>
         </div>
-        <div class="center">
-            <h3>About Lamp Books</h3>
-        <p></p>
-        <p></p>
-        </div>
+        
         <div class ="rightside">
             <h3>Our Volunteers</h3>
         <p></p>
