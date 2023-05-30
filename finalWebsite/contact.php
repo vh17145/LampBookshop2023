@@ -40,30 +40,7 @@
             
                     
         
-<form>
-        
-    <p>Name<input type="name"
-                  name="name" />
-    
-    </p>
-    
-    
-    <p>Email<input type="email"
-                  name="email" />
-    
-    </p>
-        
-    
-    <p><input type="submit"
-                  value="Go" />
-    
-    </p>
-        </form>
-        </div>
-        
-    </div>
-        
-        
+
         
           <?php include 'footer.php';?>
     </body>

@@ -35,14 +35,14 @@
 
 <div class="mySlides fade">
   
-  <img src="images/display1.jpg" style="width:100%">
+  <img src="images/lampExterior.png" style="width:100%">
   <div class="text">
-      <p>Bible journalling Display</p></div>
+      <p>Lamp Books Exterior</p></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/lampExterior.png" style="width:100%">
-  <div class="text">Caption Two</div>
+  <img src="images/display1.jpg" style="width:100%">
+  <div class="text">Bible journalling Display</div>
 </div>
 
 <div class="mySlides fade">
