@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-
+<div class="wrapper">
     <body>
          <?php include 'header.php';?>
         
@@ -27,39 +27,39 @@
   <a target="_blank" href="/images/narnia.jpg">
     <img src="images/narnia.jpg" alt="Narnia">
   </a>
-  <div class="desc"><p>Narnia is one of the stores best selling teen books and is high up on the staff reccomendsds list</p></div>
+  <div class="desc"><p>$20</p></div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="/images/adventureBible.jpg">
-    <img src="images/adventureBible.jpg" alt="Adventure bible" width="300" >
+    <img src="images/adventureBible.jpg" alt="Adventure bible" >
   </a>
   <div class="desc">
-      <p>Another teen classic at Lamp Bookshop is the adventure bible. You can find this at Lamp Books for $50</p></div>
+      <p>$50</p></div>
 </div>
 
 <div class="gallery">
   <a>
-    <img src="images/jesusCalling.jpg" alt="Sense and sensibility by jane Austen" width="300" >
+    <img src="images/narnia.jpg" alt="Sense and sensibility by jane Austen">
   </a>
   <div class="desc">
-     <p>Sense and sensibility by jane Austen is a new release within lamp books</p>
+     <p>$30</p>
     </div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="/images/jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Jesus Always" width="600" >
+    <img src="images/adventureBible.jpg" alt="Jesus Always">
   </a>
-  <div class="desc"><p>This is a spinoff to the bestseller Jesus Calling.</p>
+  <div class="desc"><p>$30</p>
     </div>
 </div>
 
 <div class="gallery">
             <a target="_blank" href="images/jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Test image " width="600">
+    <img src="images/adventureBible.jpg" alt="Test image ">
     </a>
-    <div class="desc"><p></p>
+    <div class="desc"><p>$30</p>
     </div>
             </div>
             
@@ -74,5 +74,5 @@
     </body>
     
 
- 
+    </div>
 </html>

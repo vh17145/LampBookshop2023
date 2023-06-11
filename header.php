@@ -1,6 +1,12 @@
    <div class ="header">
-        
-                <h1>Lamp Bookshop</h1>
+<div class="logorow">
+<div class="logoleftside">
+        <img src="images/logo1.png" alt="Logo" class="logo" width="200">
+       </div>
+       <div class="logorightside">
+                <h1 style="font-size:5vw;">Lamp Bookshop</h1>
+       </div>
+       </div>
         </div>
     
             <div class="navbar">

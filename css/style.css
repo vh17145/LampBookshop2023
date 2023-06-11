@@ -6,9 +6,11 @@ html{
 head{
     background-color: black;
 
-}
-.wrapper{
     
+}
+
+.wrapper{
+    align-content: center;
     padding: 20px;
 }
 body{
@@ -21,7 +23,12 @@ body{
     
 
 }
-
+h2{
+    font-size: 4vw;
+}
+h3{
+    font-size:3vw;
+}
 footer{
     background-color: blue;
 
@@ -223,4 +230,34 @@ img {vertical-align: middle;}
 
 div.slideshowContainer img {
     padding-bottom: 20px;
+}
+
+
+/* Header Column container with logo. */
+.logorow {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logorightside {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 10px; /* Some padding */
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.logoleftside {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: white; /* Grey background color */
+  padding: 10px; /* Some padding */
+}
+
+
+
+
+
+div.logoleftside img{
+    width: 100%;
+    float: left;
+    align-content: center;
+    
 }
