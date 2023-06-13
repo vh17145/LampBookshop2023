@@ -24,20 +24,20 @@
 
 <div class="mySlides fade">
   
-  <img src="images/lampExterior.png" style="width:100%">
+  <img src="images/bookshopexterior.png" style="width:100%">
   <div class="text">
-      <p>Lamp Books Exterior</p></div>
+      <p></p></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/display1.jpg" style="width:100%">
-  <div class="text">Bible journalling Display</div>
+  <img src="images/slideshowimg2.jpg" style="width:100%">
+  <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
 
   <img src="images/clothing.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
+  <div class="text"></div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>

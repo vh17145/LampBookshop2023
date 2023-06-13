@@ -30,9 +30,9 @@
 
 <form action="action_page.php" method="POST"> 
   <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
+  <input type="text" id="fname" name="fname" value=""><br>
   <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
   <label for="email">email:</label><br>
   <input type="text" id="email" name="email" value="john@mail.com"><br><br>
  <input type="submit" value="Submit">

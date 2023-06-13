@@ -24,14 +24,14 @@
         
             
 <div class="gallery">
-  <a target="_blank" href="/images/narnia.jpg">
+  <a target="_blank" href="images/seeingBeautiful.jpg">
     <img src="images/seeingBeautiful.jpg" alt="Narnia">
   </a>
   <div class="desc"><p>$20</p></div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="/images/adventureBible.jpg">
+  <a target="_blank" href="images/jesusCalling.jpg">
     <img src="images/jesusCalling.jpg" alt="Adventure bible" >
   </a>
   <div class="desc">
@@ -39,7 +39,7 @@
 </div>
 
 <div class="gallery">
-  <a>
+  <a target="_blank" href="images/narnia2.jpg">
     <img src="images/narnia2.jpg" alt="Sense and sensibility by jane Austen">
   </a>
   <div class="desc">
@@ -48,7 +48,7 @@
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="/images/jesusCalling.jpg">
+  <a target="_blank" href="images/jesusCalling.jpg">
     <img src="images/jesusCalling.jpg" alt="Jesus Always">
   </a>
   <div class="desc"><p>$30</p>
@@ -56,14 +56,14 @@
 </div>
 
 <div class="gallery">
-            <a target="_blank" href="images/jesusCalling.jpg">
+            <a target="_blank" href="images/journalbible.jpg">
     <img src="images/journalbible.jpg" alt="Test image ">
     </a>
     <div class="desc"><p>$30</p>
     </div>
             </div>
 <div class="gallery">
-            <a target="_blank" href="images/jesusCalling.jpg">
+            <a target="_blank" href="images/strong.jpg">
     <img src="images/strong.jpg" alt="Test image ">
     </a>
     <div class="desc"><p>$30</p>
@@ -71,7 +71,7 @@
             </div>
             
 <div class="gallery">
-            <a target="_blank" href="images/jesusCalling.jpg">
+            <a target="_blank" href="images/redbible.jpg">
     <img src="images/redbible.jpg" alt="Test image ">
     </a>
     <div class="desc"><p>$30</p>
