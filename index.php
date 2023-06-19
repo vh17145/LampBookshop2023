@@ -24,19 +24,19 @@
 
 <div class="mySlides fade">
   
-  <img src="images/bookshopexterior.png" style="width:100%">
+  <img src="images/slideshowimg1.jpg" >
   <div class="text">
       <p></p></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/slideshowimg2.jpg" style="width:100%">
+  <img src="images/slideshowimg2.jpg" >
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="images/clothing.jpg" style="width:100%">
+  <img src="images/slideshowimg3.jpg" >
   <div class="text"></div>
 </div>
 
