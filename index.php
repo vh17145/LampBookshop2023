@@ -24,19 +24,18 @@
 
 <div class="mySlides fade">
   
-  <img src="images/slideshowimg1.jpg" >
-  <div class="text">
-      <p></p></div>
+  <img src="images/slideshowimg1.jpg" style="width:100%;">
+  <div class="text">Clothing Display</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="images/slideshowimg2.jpg" >
+  <img src="images/slideshowimg2.jpg" style="width:100%;">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="images/slideshowimg3.jpg" >
+  <img src="images/slideshowimg3.jpg" style="width:100%;">
   <div class="text"></div>
 </div>
 

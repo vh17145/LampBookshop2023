@@ -149,16 +149,21 @@ max-width: 700px;
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 700px;
+  text-align: center;
   position: relative;
   margin: auto;
+float: none;
 }
 
+.mySlides {
+     text-align: center;
+  position: relative;
+    float: none;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: relative;
-  top: 50%;
+  
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -169,11 +174,16 @@ max-width: 700px;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
+div.mySlides prev{
+     position: absolute;
+  top: 8px;
+  left: 30px;
+}
 /* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+div.mySlides next {
+   position: absolute;
+  top: 8px;
+  right: 30px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -183,13 +193,17 @@ max-width: 700px;
 
 /* Caption text */
 .text {
-  color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: relative;
-  bottom: 8px;
-  width: 100%;
-  text-align: center
+    
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 1); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+    max-width: 700px;
+    float: none;
+ 
 }
 
 /* Number text (1/3 etc) */
@@ -256,9 +270,6 @@ div.slideshowContainer img {
   background-color: white; /* Grey background color */
   padding: 10px; /* Some padding */
 }
-
-
-
 
 
 div.logoleftside img{
