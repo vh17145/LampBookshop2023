@@ -35,6 +35,7 @@
   <input type="text" id="lname" name="lname" value=""><br><br>
   <label for="email">email:</label><br>
   <input type="text" id="email" name="email" value="john@mail.com"><br><br>
+    Comment: <textarea name="comment" rows="5" cols="40"></textarea>
  <input type="submit" value="Submit">
 </form>
 
