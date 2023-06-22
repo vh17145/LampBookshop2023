@@ -280,3 +280,18 @@ div.logoleftside img{
     align-content: center;
     
 }
+
+
+.googlemap {
+     padding-bottom: 50%;
+     position: relative;
+}
+
+.googlemap iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+    
+}
