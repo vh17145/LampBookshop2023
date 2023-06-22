@@ -14,7 +14,7 @@
     
     
     
-     <?php include 'header.php';?>
+     <?php include 'header.php';?><!-- Using php to link the header into the page -->
     <div class="row">
         <div class="leftside">
             <h3>History of The Lamp</h3>

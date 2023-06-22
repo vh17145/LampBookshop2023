@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php print_r ($_POST); 
-    $fname=$_POST["fname"];
+    $fname=$_POST["fname"]; 
     $lname=$_POST["lname"];
     $email=$_POST["email"];
     $comment=$_POST["comment"];

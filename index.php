@@ -10,7 +10,7 @@
 </head>
 <div class="wrapper">
     <body>
-      <?php include 'header.php';?>
+      <?php include 'header.php';?><!-- Using php to link the header into the page -->
         
          <div class="row">
         <div class="leftside">
@@ -43,13 +43,14 @@
 
 </div>
 <br>
-
+<!-- Ctreating 3 dots in a row that give the user a chance to go to which ever slide in the slide show they want to view. -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
+<!-- From line 54-74 is the script used to link each slide to the dots. And this code also makes the slide show rotate images automatically. It also puts the images in the basic slideshow layoutso that only one of the images is displayed -->
 <script>
 let slideIndex = 0;
 showSlides();
