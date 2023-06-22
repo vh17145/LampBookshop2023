@@ -150,15 +150,15 @@ max-width: 700px;
 /* Slideshow container */
 .slideshow-container {
   text-align: center;
-  position: relative;
+  position: absolute;
   margin: auto;
 float: none;
 }
 
 .mySlides {
-     text-align: center;
-  position: relative;
-    float: none;
+text-align: center;
+position: relative;
+float: none;
 }
 /* Next & previous buttons */
 .prev, .next {
@@ -192,17 +192,19 @@ div.mySlides next {
 }
 
 /* Caption text */
-.text {
-    
+div.text {
+
   position: absolute; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    left: 50%;
+  transform: translate(-50%, -50%);
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 1); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
+  padding: 10px; /* Some padding */
     max-width: 700px;
-    float: none;
+
  
 }
 
