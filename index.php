@@ -15,7 +15,7 @@
          <div class="row">
         <div class="leftside">
             <h3>Welcome to Lamp Books!</h3>
-      
+      <p>Lamp Books is located in Thames New Zealand. Lamp books is a christian bookstore but also a safe place for anyone who wants to hangout, sit, or chat over a hot drink. You will find a variety of products from fiction books to bibles, jewelery or gifts.<br> Check out our Contact page for more information on where to find Lamp books and how to get in touch.  </p>
         </div>
         
         <div class ="rightside">
@@ -38,8 +38,6 @@
   <img src="images/slideshowimg3.jpg" style="width:100%;">
   <div class="text" >Gifts display</div>
 </div>
-
-
 
 </div>
 <br>
@@ -69,7 +67,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 8000); // Change image every 2 seconds
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
 

@@ -34,7 +34,7 @@ h3{
 a {
     padding: 21px;
     text-decoration-line: none;
-    text-decoration: overline;
+    text-decoration: underline;
 
 
 }
@@ -158,7 +158,7 @@ position: relative;
 float: none;
 }
 /* All code in comment below is unneeded right now because i removed the prev and next buttons but i will keep it here commented incase i add them back 
-/* Next & previous buttons 
+ Next & previous buttons 
 .prev, .next {
   cursor: pointer;
   

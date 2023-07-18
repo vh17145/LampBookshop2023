@@ -23,7 +23,7 @@
         
         <div class ="rightside">
             <h3>Our Volunteers</h3>
-        <p></p>
+        <p>Our volunteers are dedicated to the amazing work that is being done through lamp books. We pride ourselves on being an open establishment for anyone who wants to come and chat with a friendly face or get help finding a book they're looking for. While currently Lamp Books has just a small team of volunteers, we would love to change that! If you are interested in volunteering at Lamp books come in and hve a chat we are sure there's a place for you here.</p>
         </div>
         
     </div>

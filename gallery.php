@@ -14,7 +14,7 @@
         
          <div class="row">
         <div class="leftside">
-            <h3>Welcome to Lamp Books!</h3>
+            <h3></h3>
       
         </div>
         
