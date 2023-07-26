@@ -19,7 +19,7 @@ body{
     background-color: whitesmoke;
     border: 1vw solid black;
     font-style: italic;
-    
+    word-break: keep-all;
     
 
 }
@@ -64,8 +64,10 @@ li a:hover {
 }
 
 
-img {
+.gallery img {
     float: right;
+    padding: 10px;
+    
 }
 
 * {

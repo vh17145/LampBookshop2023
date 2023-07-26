@@ -14,13 +14,13 @@
         
          <div class="row">
         <div class="leftside">
-            <h3></h3>
-      
+            <h3>Our Products</h3>
+      <p>Lamp books sells a variety of products. We may be labels as a book store but within our store you can find books, dvds, jewelery, gifts, plarks and so much more. If Lampbooks doesnt stock what you are lookng for chances are itt can be ordered in so dont hesitate to ask one of our volunteers.</p>
         </div>
         
         <div class ="rightside">
         
-         <h2>New books here</h2>
+         <h2>Best sellers</h2>
         
             
 <div class="gallery">
