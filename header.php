@@ -11,10 +11,19 @@
     
             <div class="navbar">
 <ul>
-    <li><a href="gallery.php">Products</a></li>
-    <li><a href="about.php">About us</a></li> 
+    
+    
+    <li>
+        <a href="gallery.php" class="dropbtn">Products</a>
+            
+    </li>
+    <li><a href="about.php">About us</a>
+    </li> 
     <li><a href="contact.php">Contact</a> </li>
     <li><a href="index.php">Home</a> </li>
 </ul>
+                
+       
+                
                 </div>
      

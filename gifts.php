@@ -23,8 +23,8 @@
             <div class="dropdown">
         <a href="gallery.php" class="dropbtn">Products</a>
              <div class="dropdown-content">
-    <a href="gifts.php">Gifts</a>
-    <a href="#"></a>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
     <a href="#">Link 3</a>
   </div>
         </div>
