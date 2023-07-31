@@ -13,8 +13,13 @@
 <ul>
     
     
-    <li>
-        <a href="gallery.php" class="dropbtn">Products</a>
+    <li class="dropdown">
+    <a href="gallery.php" class="dropbtn">Products</a>
+    <div class="dropdown-content">
+      <a href="gifts.php">Gifts</a>
+      <a href="jewelry.php">Jewelry</a>
+    
+    </div>
             
     </li>
     <li><a href="about.php">About us</a>

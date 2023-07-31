@@ -31,37 +31,6 @@ h3{
 }
 
 
-a {
-    padding: 21px;
-    text-decoration-line: none;
-    text-decoration: underline;
-
-
-}
-/* From lines 46-68 is the css code for the navbar. */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: left;
-  padding: 10px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111111;
-}
 
 
 .gallery img {
@@ -329,32 +298,41 @@ div.logoleftside img{
 }
 
 /* Dropdown menu for product page*/
-
-.dropbtn a{
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
- 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-    overflow: inherit;
-    float: right;
+li {
+  float: right;
+}
 
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+}
+
+li.dropdown {
+  display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-overflow: visible;
 }
 
 .dropdown-content a {
@@ -362,11 +340,11 @@ overflow: visible;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-
+  text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #f1f1f1;}
 
-.dropdown:hover .dropdown-content {display: block; }
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}

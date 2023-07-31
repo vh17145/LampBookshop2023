@@ -20,27 +20,20 @@
         
         <div class ="rightside">
         
-            <div class="dropdown">
-        <a href="gallery.php" class="dropbtn">Products</a>
-             <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-        </div>
-         <h2>Best sellers</h2>
+           
+         <h2>Gifts and Home Accessories</h2>
         
             
 <div class="gallery">
-  <a target="_blank" href="product.php?image=seeingBeautiful.jpg">
-    <img src="images/seeingBeautiful.jpg" alt="Seeing Beautiful Again">
+  <a target="_blank" href="product.php?image=mug1.jpg">
+    <img src="images/mug1.jpg" alt="Seeing Beautiful Again">
   </a>
   <div class="desc"><p>Seeing Beautiful by Lysa Terkeurst $30</p></div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Adventure bible" >
+  <a target="_blank" href="product.php?image=familyPlark.jpg">
+    <img src="images/familyPlark.jpg" alt="Adventure bible" >
   </a>
   <div class="desc">
       <p>Adventure bible<br>NKJV<br>$50
@@ -50,8 +43,8 @@
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=narnia2.jpg">
-    <img src="images/narnia2.jpg" alt="Sense and sensibility by jane Austen">
+  <a target="_blank" href="product.php?image=giftsBeanie.jpg">
+    <img src="images/giftsBeanie.jpg" alt="Sense and sensibility by jane Austen">
   </a>
   <div class="desc">
      <p>Narnia by C.S Lewis
@@ -63,8 +56,8 @@
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Jesus Always">
+  <a target="_blank" href="product.php?image=housePlark.jpg">
+    <img src="images/housePlark.jpg" alt="Jesus Always">
   </a>
   <div class="desc"><p>Jesus Always
       by Sarah young
@@ -93,8 +86,8 @@
             </div>
             
 <div class="gallery">
-            <a target="_blank" href="product.php?image=redbible.jpg">
-    <img src="images/redbible.jpg" alt="Red Leather Bible">
+            <a target="_blank" href="product.php?image=beanie2.jpg">
+    <img src="images/beanie2.jpg" alt="Red Leather Bible">
     </a>
     <div class="desc"><p>Red Leather<br> NIV Bible
               <br>$50
