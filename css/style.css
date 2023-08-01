@@ -15,7 +15,7 @@ head{
 }
 body{
 
-    text-align: center;
+    text-align: left;
     background-color: whitesmoke;
     border: 1vw solid black;
     font-style: italic;
@@ -25,11 +25,15 @@ body{
 }
 h2{
     font-size: 4vw;
+    text-align: center;
 }
 h3{
     font-size:3vw;
+    text-align: center;
 }
-
+h1{
+    text-align: center;
+}
 
 
 
@@ -39,6 +43,9 @@ h3{
     
 }
 
+.gallery {
+    
+}
 * {
   box-sizing: border-box;
 }
@@ -85,8 +92,8 @@ h3{
 div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
-  float: left;
   width: 180px;
+    float: left;
 }
 /* when hovering over image bordder cholour changes*/
 div.gallery:hover {
@@ -347,4 +354,8 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+form {
+    text-align: center;
 }

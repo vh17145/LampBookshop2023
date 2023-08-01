@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-<div class="wrapper">
+
     <body>
      
     
@@ -55,5 +55,5 @@
         
           <?php include 'footer.php';?>
     </body>
-    </div>
+    
 </html>

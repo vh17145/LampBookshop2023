@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-<div class="wrapper">
+
     <body>
       <?php include 'header.php';?><!-- Using php to link the header into the page -->
         
@@ -85,5 +85,5 @@ function showSlides() {
     </body>
     
 
- </div>
+
 </html>

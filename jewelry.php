@@ -25,74 +25,67 @@
         
             
 <div class="gallery">
-  <a target="_blank" href="product.php?image=mug1.jpg">
-    <img src="images/mug1.jpg" alt="Seeing Beautiful Again">
+  <a target="_blank" href="product.php?image=bracelet2.jpg">
+    <img src="images/bracelet2.jpg" alt="Sterling silver Charm bracelet">
   </a>
-  <div class="desc"><p>Seeing Beautiful by Lysa Terkeurst $30</p></div>
+  <div class="desc"><p>Sterling silver Charm bracelet</p></div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=familyPlark.jpg">
-    <img src="images/familyPlark.jpg" alt="Adventure bible" >
+  <a target="_blank" href="product.php?image=crossnecklace1.jpg">
+    <img src="images/crossnecklace1.jpg" alt="Sterling silver cross" >
   </a>
   <div class="desc">
-      <p>Adventure bible<br>NKJV<br>$50
-          
-          <br>
+      <p>Sterling silver cross $30
       </p></div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=giftsBeanie.jpg">
-    <img src="images/giftsBeanie.jpg" alt="Sense and sensibility by jane Austen">
+  <a target="_blank" href="product.php?image=faithbracelet.jpg">
+    <img src="images/faithbracelet.jpg" alt="Faith, Hope, Love Bracelet">
   </a>
   <div class="desc">
-     <p>Narnia by C.S Lewis
-      <br>$30
-      <br>
-         
-      </p>
+     <p>Faith, Hope, Love Bracelet $16.99</p>
     </div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="product.php?image=housePlark.jpg">
-    <img src="images/housePlark.jpg" alt="Jesus Always">
+  <a target="_blank" href="product.php?image=goldcross.jpg">
+    <img src="images/goldcross.jpg" alt="Sparkling Gold Crosses">
   </a>
-  <div class="desc"><p>Jesus Always
-      by Sarah young
-            <br>$30
-      <br>
-      </p>
+  <div class="desc"><p>Sparkling Gold Crosses $25</p>
     </div>
 </div>
 
-<div class="gallery">
-            <a target="_blank" href="product.php?image=journalbible.jpg">
-    <img src="images/journalbible.jpg" alt="Journaling bible">
+    <div class="gallery">
+            <a target="_blank" href="product.php?image=sistersbracelet.jpg">
+    <img src="images/sistersbracelet.jpg" alt="">
     </a>
-    <div class="desc"><p>Niv Beautiful Word Colouring Bible $60</p>
+    <div class="desc"><p>Heart bracelet for sisters $15
+        </p>
+    </div>
+            </div>    
+
+<div class="gallery">
+            <a target="_blank" href="product.php?image=beadsnecklace.jpg">
+    <img src="images/beadsnecklace.jpg" alt="Necklaces">
+    </a>
+    <div class="desc"><p>Necklaces $40 each.</p>
     </div>
             </div>
 <div class="gallery">
-            <a target="_blank" href="product.php?image=strong.jpg">
-    <img src="images/strong.jpg" alt="Strong by Lisa Bereve">
+            <a target="_blank" href="product.php?image=leatherbracelet.jpg">
+    <img src="images/leatherbracelet.jpg" alt="Leather Bracelets">
     </a>
-    <div class="desc"><p>Strong by Lisa Bevere
-              <br>$30
-      <br>
-        </p>
+    <div class="desc"><p>Leather Bracelets $5 each.</p>
     </div>
             </div>
             
 <div class="gallery">
-            <a target="_blank" href="product.php?image=beanie2.jpg">
-    <img src="images/beanie2.jpg" alt="Red Leather Bible">
+            <a target="_blank" href="product.php?image=sistersbracelet.jpg">
+    <img src="images/sistersbracelet.jpg" alt="">
     </a>
-    <div class="desc"><p>Red Leather<br> NIV Bible
-              <br>$50
-      <br>
-        
+    <div class="desc"><p>Heart bracelet for sisters $15
         </p>
     </div>
             </div>           

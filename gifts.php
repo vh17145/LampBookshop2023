@@ -26,74 +26,71 @@
             
 <div class="gallery">
   <a target="_blank" href="product.php?image=mug1.jpg">
-    <img src="images/mug1.jpg" alt="Seeing Beautiful Again">
+    <img src="images/mug1.jpg" alt="Coffee Mug">
   </a>
-  <div class="desc"><p>Seeing Beautiful by Lysa Terkeurst $30</p></div>
-</div>
+  <div class="desc"><p>Coffee Mug <br>$20
+      </p></div>
+</div> 
 
 <div class="gallery">
   <a target="_blank" href="product.php?image=familyPlark.jpg">
-    <img src="images/familyPlark.jpg" alt="Adventure bible" >
+    <img src="images/familyPlark.jpg" alt="Our Family Plark" >
   </a>
   <div class="desc">
-      <p>Adventure bible<br>NKJV<br>$50
-          
-          <br>
+      <p>Our Family Plark $40
       </p></div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="product.php?image=giftsBeanie.jpg">
-    <img src="images/giftsBeanie.jpg" alt="Sense and sensibility by jane Austen">
+    <img src="images/giftsBeanie.jpg" alt="Pink Faith Beanie">
   </a>
   <div class="desc">
-     <p>Narnia by C.S Lewis
-      <br>$30
-      <br>
-         
+     <p>Pink Faith Beanie $10
       </p>
     </div>
 </div>
 
 <div class="gallery">
   <a target="_blank" href="product.php?image=housePlark.jpg">
-    <img src="images/housePlark.jpg" alt="Jesus Always">
+    <img src="images/housePlark.jpg" alt="Joshua 24:15 Home Plark">
   </a>
-  <div class="desc"><p>Jesus Always
-      by Sarah young
-            <br>$30
-      <br>
+  <div class="desc">
+      <p>Joshua 24:15 Home Plark $30
       </p>
     </div>
 </div>
 
 <div class="gallery">
-            <a target="_blank" href="product.php?image=journalbible.jpg">
-    <img src="images/journalbible.jpg" alt="Journaling bible">
+        <a target="_blank" href="product.php?image=photoframe.jpg">
+    <img src="images/photoframe.jpg" alt="Photo Frame">
     </a>
-    <div class="desc"><p>Niv Beautiful Word Colouring Bible $60</p>
+    <div class="desc"><p>Photo Frame <br> $20</p>
     </div>
             </div>
 <div class="gallery">
-            <a target="_blank" href="product.php?image=strong.jpg">
-    <img src="images/strong.jpg" alt="Strong by Lisa Bereve">
+            <a target="_blank" href="product.php?image=coffeecup.jpg">
+    <img src="images/coffeecup.jpg" alt="Strong by Lisa Bereve">
     </a>
-    <div class="desc"><p>Strong by Lisa Bevere
-              <br>$30
-      <br>
+    <div class="desc"><p>Coffee Cup <br> $15
         </p>
     </div>
             </div>
             
 <div class="gallery">
             <a target="_blank" href="product.php?image=beanie2.jpg">
-    <img src="images/beanie2.jpg" alt="Red Leather Bible">
+    <img src="images/beanie2.jpg" alt="Light pink Knit Beanie ">
     </a>
-    <div class="desc"><p>Red Leather<br> NIV Bible
-              <br>$50
-      <br>
-        
-        </p>
+    <div class="desc"><p>Light pink Knit Beanie $10</p>
+    </div>
+            </div>           
+            
+            
+            <div class="gallery">
+            <a target="_blank" href="product.php?image=beanie2.jpg">
+    <img src="images/beanie2.jpg" alt="Light pink Knit Beanie ">
+    </a>
+    <div class="desc"><p>Light pink Knit Beanie $10</p>
     </div>
             </div>           
             
