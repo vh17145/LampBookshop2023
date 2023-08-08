@@ -21,7 +21,7 @@
         <div class ="rightside">
         
            
-         <h2>Jewlery</h2>
+         <h2>Jewelry</h2>
         
             
 <div class="gallery">
