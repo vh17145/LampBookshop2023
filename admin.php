@@ -45,9 +45,11 @@
 
            // Fetch records from the "contacts" table
     $sql = "SELECT * FROM contact";
+    
+        
      $stmt = mysqli_prepare($conn, $sql);
- mysqli_stmt_execute($stmt);
- $result = mysqli_stmt_get_result($stmt);
+
+ $result = mysqli_query($conn, $sql);
 
            
  if (mysqli_num_rows($result) > 0) {

@@ -37,11 +37,11 @@
 
 <form action="action_page.php" method="POST"> 
   <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
+  <input type="text" placeholder="John"  id="fname" name="fname" value=""><br>
   <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="text" placeholder=" Doe" id="lname" name="lname" value=""><br><br>
   <label for="email">email:</label><br>
-  <input type="text" id="email" name="email" value="john@mail.com"><br><br>
+  <input type="text" placeholder="johndoe@gmail.com" id="email" name="email" value=""><br><br>
     Comment: <textarea name="comment" rows="5" cols="40"></textarea>
  <input type="submit" value="Submit">
 </form>

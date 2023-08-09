@@ -12,7 +12,7 @@
             <div class="navbar">
 <ul>
     
-    
+    <li><a href="phplogin/login.php">Log In</a></li>   
     <li class="dropdown">
     <a href="gallery.php" class="dropbtn">Products</a>
     <div class="dropdown-content">
@@ -20,7 +20,7 @@
       <a href="jewelry.php">Jewelry</a>
     
     </div>
-            
+         
     </li>
     <li><a href="about.php">About us</a>
     </li> 
