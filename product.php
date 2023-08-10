@@ -18,19 +18,59 @@
       <p>Lamp books sells a variety of products. We may be labels as a book store but within our store you can find books, dvds, jewelery, gifts, plarks and so much more. If Lampbooks doesnt stock what you are lookng for chances are itt can be ordered in so dont hesitate to ask one of our volunteers.</p>
         </div>
             <?php 
-        if(isset($_GET['image'])) {
-    $image = $_GET['image'];
+        if(isset($_GET['id'])) {
+    $id = $_GET['id'];
         }
 ?>
         <div class ="rightside">
+          <?php 
+           
+           // Include the setup.php file to establish database connection
+    require_once 'setup.php';
+
+           // Fetch records from the "contacts" table
+    $sql = "SELECT * FROM products WHERE  id ='$id' ";
+    
         
+     $stmt = mysqli_prepare($conn, $sql);
+
+ $result = mysqli_query($conn, $sql);
+
+           
+ if (mysqli_num_rows($result) > 0) {
+     // Display the records in a table
+       
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+           $title = $row['title'];
+            $info = $row['info'];
+            $price = $row['price'];
+            $category = $row['category'];
+            $image = $row['image'];
+            ?>
+            
+                
         <div class="card">
   <img src="images/<?php print $image;?>" alt="Adventure Bible" style="width:100%">
-  <h1>Adventure Bible</h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the adventure bible..</p>
+  <h1><?php echo $title; ?></h1>
+  <p class="price">$<?php echo $price; ?></p>
+  <p><?php echo $info; ?></p>
   <p><button>Add to Cart</button></p>
 </div>
+     
+           <?php
+        }
+
+      } else {
+        echo 'No records found.';
+    }
+mysqli_close($conn);
+mysqli_stmt_close($stmt);
+
+
+           ?>
+            
+        
                     
             
         </div>

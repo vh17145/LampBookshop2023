@@ -8,7 +8,11 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-
+  <?php 
+        if(isset($_GET['category'])) {
+    $category = $_GET['category'];
+        }
+?>
     <body>
          <?php include 'header.php';?><!-- Using php to link the header into the page -->
         
@@ -19,28 +23,59 @@
         </div>
         
         <div class ="rightside">
-        
+        <h2>Best sellers</h2>
+            <?php 
            
-         <h2>Best sellers</h2>
-        
-            
-<div class="gallery">
-  <a target="_blank" href="product.php?image=seeingBeautiful.jpg">
-    <img src="images/seeingBeautiful.jpg" alt="Seeing Beautiful Again">
-  </a>
-  <div class="desc"><p>Seeing Beautiful by Lysa Terkeurst $30</p></div>
-</div>
+           // Include the setup.php file to establish database connection
+    require_once 'setup.php';
 
-<div class="gallery">
-  <a target="_blank" href="product.php?image=jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Adventure bible" >
-  </a>
-  <div class="desc">
-      <p>Adventure bible<br>NKJV<br>$50
+    if(isset($_GET['category'])) {
+        $category = $_GET['category'];
+         $sql = "SELECT * FROM products WHERE category ='$category'";
+        }
+        else{
+            // Fetch records from the "contacts" table
+    $sql = "SELECT * FROM products";
+     
+        }
           
-          <br>
-      </p></div>
+        
+     $stmt = mysqli_prepare($conn, $sql);
+
+ $result = mysqli_query($conn, $sql);
+
+           
+ if (mysqli_num_rows($result) > 0) {
+     // Display the records in a table
+       
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['id'];
+           $title = $row['title'];
+            $info = $row['info'];
+            $price = $row['price'];
+            $category = $row['category'];
+            $image = $row['image'];
+            ?>
+<div class="gallery">
+  <a target="_blank" href="product.php?id=<?php echo $id; ?>">
+    <img src="images/<?php echo $image; ?>" alt="Seeing Beautiful Again">
+  </a>
+  <div class="desc"><p><?php echo $info; ?> $<?php echo $price; ?></p></div>
 </div>
+           <?php
+        }
+
+      } else {
+        echo 'No records found.';
+    }
+mysqli_close($conn);
+mysqli_stmt_close($stmt);
+
+
+           ?>
+            
+         
+        
 
 <div class="gallery">
   <a target="_blank" href="product.php?image=narnia2.jpg">

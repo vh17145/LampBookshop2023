@@ -10,11 +10,20 @@
 </head>
 
     <body>
-      <?php include 'header.php';?><!-- Using php to link the header into the page -->
+      <?php include 'header.php';
+        //<!-- Using php to link the header into the page -->
+        session_start();
+// If the user is not logged in redirect to the login page...
+if (isset($_SESSION['loggedin'])) {
+    $name = $_SESSION['name'];
+}
+        ?>
         
          <div class="row">
         <div class="leftside">
-            <h3>Welcome to Lamp Books!</h3>
+            <h3>Welcome <?php 
+               if (isset ($name)){echo $name;}?> to Lamp Books!</h3>
+            
       <p>Lamp Books is located in Thames New Zealand. Lamp books is a christian bookstore but also a safe place for anyone who wants to hangout, sit, or chat over a hot drink. You will find a variety of products from fiction books to bibles, jewelery or gifts.<br> Check out our Contact page for more information on where to find Lamp books and how to get in touch.  </p>
         </div>
         
