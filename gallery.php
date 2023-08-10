@@ -23,7 +23,23 @@
         </div>
         
         <div class ="rightside">
-        <h2>Best sellers</h2>
+        <h2>  
+        <?php 
+            if(isset($_GET['category'])) {
+             $category = $_GET['category'];
+                if ($category == 'book') {
+                    echo 'Books';
+                }
+                if ($category == 'gifts') {
+                    echo 'Gifts and Home Accessories';
+                }
+                if ($category == 'jewelry') {
+                    echo 'Jewelry';
+                }
+            } else{
+                echo 'Products';} 
+            ?>
+            </h2>
             <?php 
            
            // Include the setup.php file to establish database connection
@@ -60,7 +76,7 @@
   <a target="_blank" href="product.php?id=<?php echo $id; ?>">
     <img src="images/<?php echo $image; ?>" alt="Seeing Beautiful Again">
   </a>
-  <div class="desc"><p><?php echo $info; ?> $<?php echo $price; ?></p></div>
+  <div class="desc"><p><?php echo $title; ?> $<?php echo $price; ?></p></div>
 </div>
            <?php
         }
@@ -74,63 +90,8 @@ mysqli_stmt_close($stmt);
 
            ?>
             
-         
         
-
-<div class="gallery">
-  <a target="_blank" href="product.php?image=narnia2.jpg">
-    <img src="images/narnia2.jpg" alt="Sense and sensibility by jane Austen">
-  </a>
-  <div class="desc">
-     <p>Narnia by C.S Lewis
-      <br>$30
-      <br>
-         
-      </p>
-    </div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="product.php?image=jesusCalling.jpg">
-    <img src="images/jesusCalling.jpg" alt="Jesus Always">
-  </a>
-  <div class="desc"><p>Jesus Always
-      by Sarah young
-            <br>$30
-      <br>
-      </p>
-    </div>
-</div>
-
-<div class="gallery">
-            <a target="_blank" href="product.php?image=journalbible.jpg">
-    <img src="images/journalbible.jpg" alt="Journaling bible">
-    </a>
-    <div class="desc"><p>Niv Beautiful Word Colouring Bible $60</p>
-    </div>
-            </div>
-<div class="gallery">
-            <a target="_blank" href="product.php?image=strong.jpg">
-    <img src="images/strong.jpg" alt="Strong by Lisa Bereve">
-    </a>
-    <div class="desc"><p>Strong by Lisa Bevere
-              <br>$30
-      <br>
-        </p>
-    </div>
-            </div>
-            
-<div class="gallery">
-            <a target="_blank" href="product.php?image=redbible.jpg">
-    <img src="images/redbible.jpg" alt="Red Leather Bible">
-    </a>
-    <div class="desc"><p>Red Leather<br> NIV Bible
-              <br>$50
-      <br>
         
-        </p>
-    </div>
-            </div>           
             
         </div>
         
