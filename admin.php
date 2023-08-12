@@ -37,7 +37,7 @@
         
          <div class="row">
        <main>
-             
+             <h3>Edit Customer messages </h3>
              <?php 
            
            // Include the setup.php file to establish database connection
@@ -71,13 +71,38 @@
       } else {
         echo 'No records found.';
     }
+
+
+
+
+           // Fetch records from the "contacts" table
+    $sql = "SELECT * FROM pages";
+    
+           
+ if (mysqli_num_rows($result) > 0) {
+     // Display the records in a table
+        echo '<table>';
+        echo '<tr><th></th><th>Last Name</th><th>Email</th><th>Comment</th><th>Actions</th></tr>';
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<tr>';
+            echo '<td>' . $row['title1'] . '</td>';
+            echo '<td>' . $row['text1'] . '</td>';
+            echo '<td>' . $row['text2'] . '</td>';
+            echo '<td>' . $row['title2'] . '</td>';
+            echo '<td><a href="edit.php?id=' . $row['id'] . ' ">Edit</a> | <a href="delete.php?id=' . $row['id'] .'">Delete</a></td>';
+                     echo '</tr>';
+        }
+        echo '</table>';
+
+      } else {
+        echo 'No records found.';
+    }
 mysqli_close($conn);
 mysqli_stmt_close($stmt);
 
 
            ?>
-             
-             
              </main>
     </div>
         

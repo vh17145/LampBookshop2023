@@ -15,9 +15,8 @@
     
             <div class="navbar">
 <ul>
-  
-    <li><a href="phplogin/login.php">Login
-        </a></li>   
+    <li><a href="phplogin/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+    
     <li class="dropdown">
     <a href="gallery.php" class="dropbtn">Products</a>
     <div class="dropdown-content">

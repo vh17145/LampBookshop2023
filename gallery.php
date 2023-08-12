@@ -14,7 +14,16 @@
         }
 ?>
     <body>
-         <?php include 'header.php';?><!-- Using php to link the header into the page -->
+          <?php 
+       
+        session_start();//starting a session
+if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending on if the user is logged in or not
+    $name = $_SESSION['name'];
+    include 'loginheader.php';
+}
+        else{
+        include 'header.php';}
+        ?>
         
          <div class="row">
         <div class="leftside">

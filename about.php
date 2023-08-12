@@ -8,6 +8,9 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     
 </head>
+    
+    
+    
   <?php
         // Include the setup.php file to establish database connection
     require_once 'setup.php';
@@ -30,12 +33,17 @@
  }
     ?>
 <body>
+      <?php 
+       
+        session_start();//starting a session
+if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending on if the user is logged in or not
+    $name = $_SESSION['name'];
+    include 'loginheader.php';
+}
+        else{
+        include 'header.php';}
+        ?>
     
-     <?php include 'header.php';
-    
-
-          
-    ?><!-- Using php to link the header into the page -->
     <div class="row">
         <div class="leftside">
             

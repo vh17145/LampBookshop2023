@@ -39,7 +39,7 @@ if ($stmt->num_rows > 0) {
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
         if ($_SESSION['name'] == 'admin'){
-		header('Location: home.php');
+		header('Location: ../admin.php');
             }
         else{
             header('Location: ../index.php');
