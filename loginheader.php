@@ -1,5 +1,5 @@
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <div class ="header">
       
        
@@ -16,13 +16,13 @@
             <div class="navbar">
 <ul>
     <li><a href="phplogin/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-    
+    <li><a href="phplogin/profile.php"><i class="fas fa-user-circle"></i>Profile</a></li>
     <li class="dropdown">
-    <a href="gallery.php" class="dropbtn">Products</a>
+    <a href="products.php" class="dropbtn">Products</a>
     <div class="dropdown-content">
-     <a href="gallery.php?category=book">Books</a>
-      <a href="gallery.php?category=gifts">Gifts</a>
-      <a href="gallery.php?category=jewelry">Jewelry</a>
+     <a href="products.php?category=book">Books</a>
+      <a href="products.php?category=gifts">Gifts</a>
+      <a href="products.php?category=jewelry">Jewelry</a>
     
     </div>
          

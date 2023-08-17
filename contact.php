@@ -10,19 +10,22 @@
 </head>
 
     <body>
-     
-    
-    
-   <?php 
-       
-        session_start();//starting a session
-if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending on if the user is logged in or not
+    <?php 
+        //<!-- Using php to link the header into the page -->
+        session_start();
+// If the user is not logged in redirect to the login page...
+if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
-    include 'loginheader.php';
+     if ($_SESSION['name'] == 'admin'){
+        include 'adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
 }
         else{
         include 'header.php';}
-        ?>
+        
+          ?>
         
          <div class="row">
         <div class="leftside">

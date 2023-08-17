@@ -16,11 +16,19 @@
 // If the user is not logged in redirect to the login page...
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
-    include 'loginheader.php';
+     if ($_SESSION['name'] == 'admin'){
+        include 'adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
 }
         else{
         include 'header.php';}
-        ?>
+        
+     
+        
+      
+          ?>
         
          <div class="row">
         <div class="leftside">

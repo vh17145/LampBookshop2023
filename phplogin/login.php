@@ -23,11 +23,11 @@
     
     <li><a href="login.php">Log In</a></li>   
     <li class="dropdown">
-    <a href="/LampBookshop2023/gallery.php" class="dropbtn">Products</a>
+    <a href="/LampBookshop2023/products.php" class="dropbtn">Products</a>
     <div class="dropdown-content">
-      <a href="/LampBookshop2023/gifts.php">Gifts</a>
-      <a href="/LampBookshop2023/jewelry.php">Jewelry</a>
-    
+      <a href="../products.php?category=book">Books</a>
+      <a href="../products.php?category=gifts">Gifts</a>
+      <a href="../products.php?category=jewelry">Jewelry</a>
     </div>
          
     </li>

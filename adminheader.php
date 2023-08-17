@@ -15,15 +15,14 @@
     
             <div class="navbar">
 <ul>
-  
-    <li><a href="phplogin/login.php">Login
-        </a></li>   
+    <li><a href="phplogin/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+    
     <li class="dropdown">
     <a href="products.php" class="dropbtn">Products</a>
     <div class="dropdown-content">
-     <a href="gallery.php?category=book">Books</a>
-      <a href="gallery.php?category=gifts">Gifts</a>
-      <a href="gallery.php?category=jewelry">Jewelry</a>
+     <a href="products.php?category=book">Books</a>
+      <a href="products.php?category=gifts">Gifts</a>
+      <a href="products.php?category=jewelry">Jewelry</a>
     
     </div>
          
@@ -33,6 +32,7 @@
     </li> 
     <li><a href="contact.php">Contact</a> </li>
     <li><a href="index.php">Home</a> </li>
+     <li><a href="admin.php">Admin</a>
 </ul>
                 
        

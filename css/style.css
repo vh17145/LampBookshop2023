@@ -66,7 +66,7 @@ h1{
   flex: 30%; /* Set the width of the sidebar */
   background-color: bisque; /* Grey background color */
   padding: 10px; /* Some padding */
-  width: 100%;
+  
 }
 
 
@@ -89,11 +89,18 @@ h1{
   }
 }
 /* Gallery css*/
+
+.products{
+    display: flex;
+  flex-wrap: wrap;
+}
 div.gallery {
-  margin: 5px;
+  margin: 10px;
   border: 1px solid #ccc;
-  width: 180px;
-    float: left;
+  max-width: 180px;
+  width: 100%;
+  float: left;
+
 }
 /* when hovering over image bordder cholour changes*/
 div.gallery:hover {
@@ -135,42 +142,6 @@ text-align: center;
 position: relative;
 float: none;
 }
-/* All code in comment below is unneeded right now because i removed the prev and next buttons but i will keep it here commented incase i add them back 
- Next & previous buttons 
-.prev, .next {
-  cursor: pointer;
-  
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-div.mySlides prev{
-     position: absolute;
-  top: 8px;
-  left: 30px;
-}
-
-
-/* Position the "next button" to the right 
-div.mySlides next {
-   position: absolute;
-  top: 8px;
-  right: 30px;
-}
-
- /* On hover, add a black background color with a little bit see-through 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-*/
-
-/* Caption text */
 div.text {
 
   position: absolute; /* Position the background text */
@@ -358,4 +329,35 @@ li.dropdown {
 
 form {
     text-align: center;
+}
+
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
 }

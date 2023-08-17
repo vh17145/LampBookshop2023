@@ -7,19 +7,26 @@
     <title>Lamp Bookshop Thames</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
-</head>
+</head><?php 
+          session_start()
+    ?>
   <?php 
+ 
         if(isset($_GET['category'])) {
     $category = $_GET['category'];
         }
 ?>
     <body>
-          <?php 
-       
-        session_start();//starting a session
-if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending on if the user is logged in or not
+           <?php 
+  
+// If the user is not logged in redirect to the login page...
+if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
-    include 'loginheader.php';
+     if ($_SESSION['name'] == 'admin'){
+        include 'adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
 }
         else{
         include 'header.php';}
@@ -49,6 +56,7 @@ if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending o
                 echo 'Products';} 
             ?>
             </h2>
+            <div class="products">
             <?php 
            
            // Include the setup.php file to establish database connection
@@ -105,7 +113,7 @@ mysqli_stmt_close($stmt);
         </div>
         
     </div>
-        
+        </div>
     
      <?php include 'footer.php';?>
      

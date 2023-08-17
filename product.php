@@ -1,3 +1,25 @@
+<?php 
+if(isset($_GET['action']) && $_GET['action']=="add") {
+    $id=intval($_GET['id']);
+    if(isset($_SESSION['cart'][$id])) {
+        $_SESSION['cart'][$id]['quantity']++;
+    } else { 
+        $stmt = $mysqli->prepare("SELECT * FROM products WHERE id = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
+        if(isset($result['id']) && $result['id']) {
+            $_SESSION['cart'][$result['id']] = array(
+                "quantity" => 1,
+                "price" => $result['price']
+            );
+        } else {
+            $message="This product id is invalid!";
+        }
+    } 
+} 
+  
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,35 +32,44 @@
 </head>
 <div class="wrapper">
     <body>
-       <?php 
-       
-        session_start();//starting a session
-if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending on if the user is logged in or not
+        <?php 
+        //<!-- Using php to link the header into the page -->
+        session_start();
+// If the user is not logged in redirect to the login page...
+if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
-    include 'loginheader.php';
+     if ($_SESSION['name'] == 'admin'){
+        include 'adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
 }
         else{
         include 'header.php';}
-        ?>
+         ?>
         
          <div class="row">
         <div class="leftside">
             <h3>Our Products</h3>
       <p>Lamp books sells a variety of products. We may be labels as a book store but within our store you can find books, dvds, jewelery, gifts, plarks and so much more. If Lampbooks doesnt stock what you are lookng for chances are itt can be ordered in so dont hesitate to ask one of our volunteers.</p>
         </div>
-            <?php 
-        if(isset($_GET['id'])) {
-    $id = $_GET['id'];
-        }
-?>
+        
         <div class ="rightside">
-          <?php 
-           
-           // Include the setup.php file to establish database connection
-    require_once 'setup.php';
+            
+<h1>Product List</h1>
+<?php 
+    if(isset($message)) { 
+        echo "<h2>$message</h2>";
+    }
+?> 
 
-           // Fetch records from the "contacts" table
-    $sql = "SELECT * FROM products WHERE  id ='$id' ";
+<?php 
+             require_once 'setup.php';
+                    // Fetch records from the "contacts" table
+           
+            if(isset($_GET['id'])) {
+             $id = $_GET['id'];
+    $sql = "SELECT * FROM products WHERE id ='$id'";
     
         
      $stmt = mysqli_prepare($conn, $sql);
@@ -56,31 +87,25 @@ if (isset($_SESSION['loggedin'])) {// Changing how the nav bar looks depending o
             $price = $row['price'];
             $category = $row['category'];
             $image = $row['image'];
-            ?>
+        
             
-                
-        <div class="card">
+?> 
+          
+ <div class="card">
   <img src="images/<?php print $image;?>" alt="Adventure Bible" style="width:100%">
   <h1><?php echo $title; ?></h1>
   <p class="price">$<?php echo $price; ?></p>
   <p><?php echo $info; ?></p>
-  <p><button>Add to Cart</button></p>
+  <p><a href="cart.php?page=products&action=add&id=<?php echo $row['id'] ?>">Add to cart</a></p>
 </div>
-     
-           <?php
-        }
-
-      } else {
-        echo 'No records found.';
-    }
-mysqli_close($conn);
-mysqli_stmt_close($stmt);
 
 
-           ?>
+       <?php 
+}
+ }
+            }
+?>     
             
-        
-                    
             
         </div>
         
