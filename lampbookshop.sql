@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 10, 2023 at 12:43 AM
+-- Generation Time: Aug 17, 2023 at 11:24 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `lampbookshop`
 --
+CREATE DATABASE IF NOT EXISTS `lampbookshop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `lampbookshop`;
 
 -- --------------------------------------------------------
 
@@ -34,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `accounts`
@@ -49,7 +51,9 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
 (6, 'vivi', '$2y$10$vEx/DGwva/lRmoI9Y82eQO2kLAriYoaPJxLF.1jTRZpTnHUZr2aAC', 'vivi@gmail.com'),
 (7, 'luke', '$2y$10$XemFpRUaODn.rmuGaf3HouaFHq06CkbumS6nUhVSAiKL.pG4TlDE.', 'luke@gmail'),
 (8, 'test1', '$2y$10$8Of6Ov9104gKiHEHKq7bUu79MlRoorldNXNLYisZcLf43ZW6Ge0JG', 'test1@gmail.com'),
-(9, 'vern', '$2y$10$qL6RjWly1uWHCJrpnl4OleKW3v6DG/vZb8c5j/rEapmZ.7hqUtgFa', 'vern@mail.com');
+(9, 'vern', '$2y$10$qL6RjWly1uWHCJrpnl4OleKW3v6DG/vZb8c5j/rEapmZ.7hqUtgFa', 'vern@mail.com'),
+(10, 'vh123', '$2y$10$Fet3gcLaGDh6kUdl9e6.OegUu6GZqOL6UrqgSAAW5GY5RcZcsXiPq', 'violetteh65@gmail.com'),
+(11, 'admin', '$2y$10$JUZxBWEi3c8aWYxn8/CpX.2t9fX4L2QByLWEdZydVERpOX8MiRDcC', 'vh17145@thameshigh.school.nz');
 
 -- --------------------------------------------------------
 
@@ -65,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `email` varchar(100) NOT NULL,
   `comment` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `contact`
@@ -73,10 +77,13 @@ CREATE TABLE IF NOT EXISTS `contact` (
 
 INSERT INTO `contact` (`id`, `fname`, `lname`, `email`, `comment`) VALUES
 (1, 'Violette', 'Hollis', 'vh17145@thameshigh.school.nz', 'i like lamp books'),
-(6, 'vi', 'hollis', 'vi@mail.com', 'this is my comment '),
-(7, 'VR', 'Hollis', 'violetteh65@gmail.com', 'This is Another test'),
+(10, '', '', '', ''),
+(6, 'violette', 'hollis', 'vi@mail.com', 'this is my comment '),
+(7, 'VR', 'Hollis', 'violetteh65@gmail.com', 'Test 2'),
 (8, 'violette', 'test', 'john@mail.com', ''),
-(9, 'VR', 'hollis', 'john@mail.com', 'another test');
+(9, 'VRH', 'hollis', 'john@mail.com', 'another test..'),
+(11, '', '', '', ''),
+(12, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -118,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `category` varchar(50) NOT NULL,
   `image` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `products`
@@ -127,7 +134,28 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`id`, `title`, `info`, `price`, `category`, `image`) VALUES
 (1, 'Seeing Beautiful Again', 'Seeing Beautiful by Lysa Terkeurst', 30, 'book', 'seeingBeautiful.jpg'),
 (2, 'Adventure bible', 'Adventure bible<br>NKJV<br>', 50, 'book', 'jesusCalling.jpg'),
-(3, 'Coffee Mug', 'Coffee Mug ', 20, 'gifts', 'mug1.jpg');
+(4, 'Narnia by C.S Lewis', 'Narnia by C.S Lewis\r\n      <br>', 30, 'book', 'narnia2.jpg'),
+(5, 'Jesus Always<br>', 'Jesus Always\r\n      by Sarah young\r\n            <br>', 30, 'book', 'jesusCalling.jpg'),
+(6, 'Journaling bible', 'Niv Beautiful Word Colouring Bible', 60, 'book', 'journalbible.jpg'),
+(7, 'Strong<br>', 'Strong by Lisa Bevere\r\n              <br>', 30, 'book', 'strong.jpg'),
+(19, 'Charm bracelet', 'Sterling silver Charm bracelet', 20, 'jewelry', 'bracelet2.jpg'),
+(14, 'Fiercly Loved<br>', 'Fiercly Loved\n<br>', 50, 'book', 'fierclyloved.jpg'),
+(9, 'Our Family Plark', 'Our Family Plark<br>\r\n<br>', 40, 'gifts', 'familyPlark.jpg'),
+(10, 'Pink Faith Beanie', 'Pink Faith Beanie<br>\r\n<br>', 10, 'gifts', 'giftsBeanie.jpg'),
+(11, 'Home Plark<br>', 'Joshua 24:15 Home Plark <br>\r\n<br>                         ', 30, 'gifts', 'housePlark.jpg'),
+(12, 'Coffee Mug<br>', 'Coffee Mug <br>\r\n<br>                         ', 20, 'gifts', 'mug1.jpg'),
+(13, 'Red Leather Bible', 'Red Leather NIV Bible\r\n<br>', 50, 'book', 'redbible.jpg'),
+(15, 'Photo Frame<br>', 'Photo Frame', 20, 'gifts', 'photoframe.jpg'),
+(16, 'Coffee Cup <br>', 'Coffee Cup ', 15, 'gifts', 'coffeecup.jpg'),
+(17, 'Knit Beanie <br>', 'Light pink Knit Beanie ', 10, 'gifts', 'beanie2.jpg'),
+(18, 'Knit Beanie <br>', 'Light pink Knit Beanie ', 10, 'gifts', 'beanie2.jpg'),
+(20, 'Silver cross <br>', 'Sterling silver cross', 30, 'jewelry', 'crossnecklace1.jpg'),
+(21, 'Bracelet <br>', 'Faith, Hope, Love Bracelet', 16.99, 'jewelry', 'faithbracelet.jpg'),
+(22, ' Gold Cross<br>', 'Sparkling Gold Crosses ', 25, 'jewelry', 'goldcross.jpg'),
+(23, 'Heart bracelet', 'Heart bracelet for sisters ', 15, 'jewelry', 'sistersbracelet.jpg'),
+(24, 'Necklaces $30 each.', 'Necklaces $30 each.', 30, 'jewelry', 'beadsnecklace.jpg'),
+(25, 'Leather Bracelets<br>', 'Leather Bracelets $5 each.', 5, 'jewelry', 'leatherbracelet.jpg'),
+(26, 'Heart bracelet', 'Heart bracelet for sisters', 15, 'jewelry', 'sistersbracelet.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
