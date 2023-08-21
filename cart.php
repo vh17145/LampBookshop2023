@@ -1,20 +1,4 @@
 
-<?php 
-
-if (isset($_POST['submit'])) {
-    foreach($_POST['quantity'] as $key => $val) {
-        if($val==0) {
-            unset($_SESSION['cart'][$key]);
-        }else{
-            $_SESSION['cart'][$key]['quantity']=$val;
-        }
-    }
-}
-?> 
-  
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,31 +38,40 @@ if (isset($_SESSION['loggedin'])) {
         <div class ="rightside">
             
           <h1>Cart</h1> 
-<?php 
-if(isset($_SESSION['cart'])) {
-    $arrProductIds=array();
-    foreach ($_SESSION['cart'] as $id => $value) {
-        $arrProductIds[] = $id;
-    }
-    $strIds=implode(",", $arrProductIds);
-    $stmt = $mysqli->prepare("SELECT * FROM products WHERE id IN (?)");
-    $stmt->bind_param("s", $strIds);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($row = $result->fetch_assoc()) {
-    ?>
-        <p><?php echo $row['title'] ?> x <?php echo $_SESSION['cart'][$row['id']]['quantity'] ?></p>
-    <?php
-    } 
-?>
-    <hr />
-    <a href="index.php?page=cart">Go to cart</a>
-<?php
-} else {
-    echo "<p>Your Cart is empty. Please add some products.</p>";
-}
-?>  
             
+            <?php
+// Include the setup.php file to establish database connection
+require_once 'setup.php';
+// Check if the form is submitted
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    
+    // Check if all required form fields are filled
+    if(isset($_POST['id'] )) {
+        print_r($_POST);
+        $product_id = $_POST['id'];
+        $client_id = 2;
+        $date = date("Y-m-d");
+        $amount = $_POST['price'];
+        //$comment = $_POST['comment'];
+ $sql = "INSERT INTO invoices (product_id, client_id, date, amount)
+VALUES ('$product_id', '$client_id', '$date', '$amount')";
+
+if ($conn->query($sql) === TRUE) {
+?>
+<p>New Invoice recieved</p>            
+            
+            <?php
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+    }
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
             
              </div>
         

@@ -96,9 +96,14 @@ if (isset($_SESSION['loggedin'])) {
   <h1><?php echo $title; ?></h1>
   <p class="price">$<?php echo $price; ?></p>
   <p><?php echo $info; ?></p>
-  <p><a href="cart.php?page=products&action=add&id=<?php echo $row['id'] ?>">Add to cart</a></p>
+     
+     <form method="post" action="cart.php">
+<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+<input type="hidden" name="price" value="<?php echo $row['price']; ?>">
+<input type="submit" value="Add to Cart">
+</form>
+  
 </div>
-
 
        <?php 
 }
