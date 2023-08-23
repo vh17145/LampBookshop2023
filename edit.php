@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+      <?php 
+    session_start()
+        ?>
+    <?php
+        //<!-- Using php to link the header into the page -->
+   
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: phplogin/login.php');
+}else{
+    ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,7 +90,8 @@ mysqli_close($conn);
         
         
         
-          <?php include 'footer.php';?>
+          <?php include 'footer.php';
+}?>
     </body>
     </div>
 </html>

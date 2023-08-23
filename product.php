@@ -35,6 +35,14 @@ if(isset($_GET['action']) && $_GET['action']=="add") {
         <?php 
         //<!-- Using php to link the header into the page -->
         session_start();
+         
+        //<!-- Using php to link the header into the page -->
+   
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: phplogin/login.php');
+}else{
+    
 // If the user is not logged in redirect to the login page...
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
@@ -115,7 +123,8 @@ if (isset($_SESSION['loggedin'])) {
     </div>
         
     
-     <?php include 'footer.php';?>
+     <?php include 'footer.php';
+}?>
      
     </body>
     

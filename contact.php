@@ -9,6 +9,29 @@
      
 </head>
 
+  <?php
+        // Include the setup.php file to establish database connection
+    require_once 'setup.php';
+       // Fetch records from the "contacts" table
+    $sql = "SELECT * FROM pages where id = 2 ";
+    
+        
+ $result = mysqli_query($conn, $sql);
+
+           
+ if (mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+        //print_r($row);
+    $title1 =$row['title1'];
+    $text1 =$row['text1'];
+    $image1 =$row['image1'];
+    $title2 =$row['title2'];
+    $text2 =$row['text2'];
+    $text3 = $row['text3'];
+ }
+    ?>
+    
+    
     <body>
     <?php 
         //<!-- Using php to link the header into the page -->
@@ -29,10 +52,8 @@ if (isset($_SESSION['loggedin'])) {
         
          <div class="row">
         <div class="leftside">
-            <h3>Lamp contact details</h3>
-       <p>Contact Lamp Bookshop through our email address:<br>
-        Our phone number: 027 222 8228<br>
-        Or come in store at 595 MacKay Street, Thames 3500<br>
+            <h3><?php echo $title1; ?></h3>
+       <p><?php echo $text2; ?><br>
             </p>
 <!-- This piece of code is for the google maps frame-->
             <div class="googlemap">
@@ -41,11 +62,11 @@ if (isset($_SESSION['loggedin'])) {
         </div>
        
         <div class ="rightside">
-            <h3>Customer Newspaper</h3>
-        <p> Are you a regular customer? Fillout here to be added to the regulars list and be informed on whats going on at The Lamp.</p>
+            <h3><?php echo $title2; ?></h3>
+        <p><?php echo $text1; ?></p>
             
                     
-        <h2>Contact Form</h2>
+        <h2></h2>
 
 <form action="action_page.php" method="POST"> 
   <label for="fname">First name:</label><br>
