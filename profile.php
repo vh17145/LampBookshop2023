@@ -29,39 +29,25 @@ $stmt->close();
 	<head>
 		<meta charset="utf-8">
 		<title>Profile Page</title>
-		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	</head>
     
-    
-    <div class ="header">
-<div class="logorow">
-<div class="logoleftside">
-        <img src="/LampBookshop2023/images/logo1.png" alt="Logo" class="logo" width="200">
-       </div>
-       <div class="logorightside">
-                <h1 style="font-size:5vw;">Lamp Bookshop</h1>
-       </div>
-       </div>
-        </div>
-    
-            <div class="navbar">
-<ul>
-    
-    <li><a href="logout.php">Log Out</a></li>   
-    <li class="dropdown">
-    <a href="../products.php" class="dropbtn">Products</a>
-    <div class="dropdown-content">
-     <a href="../products.php?category=book">Books</a>
-      <a href="../products.php?category=gifts">Gifts</a>
-      <a href="../products.php?category=jewelry">Jewelry</a></div>
-    </li>
-    <li><a href="../about.php">About us</a>
-    </li> 
-    <li><a href="../contact.php">Contact</a> </li>
-    <li><a href="../index.php">Home</a> </li>
-</ul>
-                    </div>
+   
+           <?php 
+    if (isset($_SESSION['loggedin'])) {
+    $name = $_SESSION['name'];
+     if ($_SESSION['name'] == 'admin'){
+        include 'adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
+}
+        else{
+        include 'header.php';}
+        
+     
+    ?>
 	<body>
 	
 		<div class="content">
@@ -73,10 +59,7 @@ $stmt->close();
 						<td>Username:</td>
 						<td><?=$_SESSION['name']?></td>
 					</tr>
-					<tr>
-						<td>Password:</td>
-						<td><?=$password?></td>
-					</tr>
+					
 					<tr>
 						<td>Email:</td>
 						<td><?=$email?></td>

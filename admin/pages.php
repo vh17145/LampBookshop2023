@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Lamp Bookshop</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
      
     
     <style>
@@ -24,6 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
             width: 100%;
         }
         table {
+            font-size: 1vw;
             width: 100%;
             border-collapse: collapse;
         }
@@ -39,6 +40,9 @@ if (!isset($_SESSION['loggedin'])) {
         tr:hover {
             background-color: antiquewhite;
         }
+        img {
+            width: 10vw;
+        }
     </style>
 
 </head>
@@ -49,11 +53,14 @@ if (!isset($_SESSION['loggedin'])) {
         //<!-- Using php to link the header into the page -->
    
 // If the user is not logged in redirect to the login page...
+
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
-    include 'loginheader.php';
-    
-  
+     if ($_SESSION['name'] == 'admin'){
+        include '../adminheader.php';
+    }
+    else{
+    include 'loginheader.php';}
 }
         else{
         include 'header.php';}
@@ -64,10 +71,10 @@ if (isset($_SESSION['loggedin'])) {
              <?php 
            
            // Include the setup.php file to establish database connection
-    require_once 'setup.php';
+    require_once '../setup.php';
 
            // Fetch records from the "contacts" table
-    $sql = "SELECT * FROM contact";
+    $sql = "SELECT * FROM pages";
     
         
      $stmt = mysqli_prepare($conn, $sql);
@@ -81,12 +88,16 @@ if (isset($_SESSION['loggedin'])) {
         echo '<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Comment</th><th>Actions</th></tr>';
 
         while ($row = mysqli_fetch_assoc($result)) {
+        
             echo '<tr>';
-            echo '<td>' . $row['fname'] . '</td>';
-            echo '<td>' . $row['lname'] . '</td>';
-            echo '<td>' . $row['email'] . '</td>';
-            echo '<td>' . $row['comment'] . '</td>';
-            echo '<td><a href="edit.php?id=' . $row['id'] . ' ">Edit</a> | <a href="delete.php?id=' . $row['id'] .'">Delete</a></td>';
+            echo '<td>' . $row['page_name'] . '</td>';
+            echo '<td>' . $row['title1'] . '</td>';
+            echo '<td>' . $row['text1'] . '</td>';
+            echo '<td>' . $row['title2'] . '</td>';
+            echo '<td>' . $row['text2'] . '</td>';
+            echo '<td>' . $row['text3'] . '</td>';
+            echo '<td>'  . '<img src =../images/' . $row['image1'] . '>' .  '</td>';
+            echo '<td><a href="pages_edit.php?id=' . $row['id'] . ' ">Edit</a> | </td>';
                      echo '</tr>';
         }
         echo '</table>';
@@ -94,7 +105,7 @@ if (isset($_SESSION['loggedin'])) {
       } else {
         echo 'No records found.';
     }
-echo ' <li><a href="index.php">Home</a> </li>';
+
 
 mysqli_close($conn);
 mysqli_stmt_close($stmt);
@@ -106,7 +117,7 @@ mysqli_stmt_close($stmt);
         
         
         
-          <?php include 'footer.php';
+          <?php include '../footer.php';
 }
         ?>
     </body>

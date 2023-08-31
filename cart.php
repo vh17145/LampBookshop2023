@@ -9,7 +9,9 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-    <?php     session_start()?>
+    <?php     session_start();
+    date_default_timezone_set('Pacific/Auckland');
+    ?>
 <div class="wrapper">
     <body>
         <?php 
@@ -19,6 +21,7 @@
    
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
+    $user_id = $_SESSION['id'];
      if ($_SESSION['name'] == 'admin'){
         include 'adminheader.php';
     }
@@ -49,8 +52,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if all required form fields are filled
     if(isset($_POST['id'] )) {
         print_r($_POST);
+        print_r($_SESSION);
         $product_id = $_POST['id'];
-        $client_id = 2;
+        $client_id = $_SESSION['id'];
         $date = date("Y-m-d");
         $amount = $_POST['price'];
         //$comment = $_POST['comment'];

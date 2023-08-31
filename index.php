@@ -8,11 +8,12 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
      
 </head>
-
+<?php    session_start();
+    ?>
     <body>
       <?php 
         //<!-- Using php to link the header into the page -->
-        session_start();
+     
 // If the user is not logged in redirect to the login page...
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
