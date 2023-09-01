@@ -32,6 +32,7 @@ if (isset($_SESSION['loggedin'])) {
         include 'header.php';}
          ?>
         
+        
          <div class="row">
         <div class="leftside">
             <h3>Our Products</h3>
@@ -55,6 +56,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         print_r($_SESSION);
         $product_id = $_POST['id'];
         $client_id = $_SESSION['id'];
+        $_SESSION['title'] = $_POST['title'];
         $date = date("Y-m-d");
         $amount = $_POST['price'];
         //$comment = $_POST['comment'];
@@ -62,10 +64,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 VALUES ('$product_id', '$client_id', '$date', '$amount')";
 
 if ($conn->query($sql) === TRUE) {
+    
 ?>
-<p>New Invoice recieved</p>            
+ 
+   <p>New Invoice recieved</p>          
+   <?php
+    $_SESSION['added'] = TRUE;
+    
+        header('Location: products.php');
             
-            <?php
+            
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Aug 17, 2023 at 11:24 PM
+-- Generation Time: Sep 01, 2023 at 01:10 AM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `lampbookshop`
 --
-CREATE DATABASE IF NOT EXISTS `lampbookshop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `lampbookshop`;
 
 -- --------------------------------------------------------
 
@@ -35,25 +33,22 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `fname` varchar(100) NOT NULL,
+  `lname` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
-(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com'),
-(2, 'vhollis', '$2y$10$es7voWi1v0xa5Y7WkXSuEOTw6A4faixHZycOJct7kwByrukKcnKC6', 'violetteh65@gmail.com'),
-(3, 'vh17145', '$2y$10$4FSX4mxOwAhXl3HOFnPSYe.KHKsIQvmbZMwcClkTdmFmYdj4G4X5.', 'vh17145@thameshigh.school.nz'),
-(4, 'ftitftk', '$2y$10$0hBPsqU9IoxyBBJRxp.rmOlE.EuX4BqSv1HoBKx8Xut0UJpc0jQ.W', 'violette@gmail.com'),
-(5, 'vh', '$2y$10$//sAR43YGaptIRRtTKYz9edZ.bhKzrjMc6t7EtUiX9DNAH1m2F73W', 'vh@gmail.com'),
-(6, 'vivi', '$2y$10$vEx/DGwva/lRmoI9Y82eQO2kLAriYoaPJxLF.1jTRZpTnHUZr2aAC', 'vivi@gmail.com'),
-(7, 'luke', '$2y$10$XemFpRUaODn.rmuGaf3HouaFHq06CkbumS6nUhVSAiKL.pG4TlDE.', 'luke@gmail'),
-(8, 'test1', '$2y$10$8Of6Ov9104gKiHEHKq7bUu79MlRoorldNXNLYisZcLf43ZW6Ge0JG', 'test1@gmail.com'),
-(9, 'vern', '$2y$10$qL6RjWly1uWHCJrpnl4OleKW3v6DG/vZb8c5j/rEapmZ.7hqUtgFa', 'vern@mail.com'),
-(10, 'vh123', '$2y$10$Fet3gcLaGDh6kUdl9e6.OegUu6GZqOL6UrqgSAAW5GY5RcZcsXiPq', 'violetteh65@gmail.com'),
-(11, 'admin', '$2y$10$JUZxBWEi3c8aWYxn8/CpX.2t9fX4L2QByLWEdZydVERpOX8MiRDcC', 'vh17145@thameshigh.school.nz');
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `fname`, `lname`) VALUES
+(2, 'vhollis', '$2y$10$es7voWi1v0xa5Y7WkXSuEOTw6A4faixHZycOJct7kwByrukKcnKC6', 'violetteh65@gmail.com', '', ''),
+(3, 'vh17145', '$2y$10$4FSX4mxOwAhXl3HOFnPSYe.KHKsIQvmbZMwcClkTdmFmYdj4G4X5.', 'vh17145@thameshigh.school.nz', '', ''),
+(9, 'vern', '$2y$10$qL6RjWly1uWHCJrpnl4OleKW3v6DG/vZb8c5j/rEapmZ.7hqUtgFa', 'vern@mail.com', '', ''),
+(10, 'vh123', '$2y$10$Fet3gcLaGDh6kUdl9e6.OegUu6GZqOL6UrqgSAAW5GY5RcZcsXiPq', 'violetteh65@gmail.com', '', ''),
+(11, 'admin', '$2y$10$JUZxBWEi3c8aWYxn8/CpX.2t9fX4L2QByLWEdZydVERpOX8MiRDcC', 'vh17145@thameshigh.school.nz', '', ''),
+(13, 'Hollis', '$2y$10$cCNFBnxniIEms4DTjN/na.RzgUnSOqyLS3voDKtiT3E3Bp14j266a', 'vivi12@gmail.com', 'Vi', 'Hollis');
 
 -- --------------------------------------------------------
 
@@ -88,12 +83,38 @@ INSERT INTO `contact` (`id`, `fname`, `lname`, `email`, `comment`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invoices`
+--
+
+DROP TABLE IF EXISTS `invoices`;
+CREATE TABLE IF NOT EXISTS `invoices` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `client_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `amount` double NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `invoices`
+--
+
+INSERT INTO `invoices` (`id`, `client_id`, `product_id`, `amount`, `date`) VALUES
+(46, 3, 6, 60, '2023-09-01'),
+(45, 3, 5, 30, '2023-09-01'),
+(44, 3, 1, 30, '2023-09-01');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pages`
 --
 
 DROP TABLE IF EXISTS `pages`;
 CREATE TABLE IF NOT EXISTS `pages` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `page_name` varchar(50) NOT NULL,
   `title1` varchar(100) NOT NULL,
   `text1` text NOT NULL,
   `image1` varchar(50) NOT NULL,
@@ -101,14 +122,15 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `text2` text NOT NULL,
   `text3` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pages`
 --
 
-INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `text3`) VALUES
-(1, 'Our team', 'Our volunteers are dedicated to the amazing work that is being done through lamp books. We pride ourselves on being an open establishment for anyone who wants to come and chat with a friendly face or get help finding a book they\'re looking for. While currently Lamp Books has just a small team of volunteers, we would love to change that! If you are interested in volunteering at Lamp books come in and hve a chat we are sure there\'s a place for you here.', 'lampExterior.png', 'The Lamp Building', 'The Lamp is a multi-faceted complex with Lamp books being just one part of the complex. Upstairs there is a beautiful bed and breakfast which overlooks the town. Next door is the Bitte cafe which is connected to lamp books through a door so feel free to grab a coffee and come and sit down with it iin Lamp books. and finally behind lamp books is the Lamp caravann stop. feel free to book online or come instore to Lamp books to book a spot.', ' The Lamp is a historic building owed by Kylie Gunn. Kylie is a key part of helping Lamp books stay afloat, she took the business on when it went under and moved the business into the Lamp complex which was truly a blessing.             Lisa is the manager of the bookshop and currently being down on staff, Lisa runs the sshow at Lamp books majority of the time. She has extensive knowledge of christian books and the bible and is always happy to help. ');
+INSERT INTO `pages` (`id`, `page_name`, `title1`, `text1`, `image1`, `title2`, `text2`, `text3`) VALUES
+(1, 'About Lamp Bookshop', 'Our team', 'Our volunteers are dedicated to the amazing work that is being done through lamp books. We pride ourselves on being an open establishment for anyone who wants to come and chat with a friendly face or get help finding a book they\'re looking for. While currently Lamp Books has just a small team of volunteers, we would love to change that! If you are interested in volunteering at Lamp books come in and hve a chat we are sure there\'s a place for you here.', 'lampExterior.png', 'The Lamp Building', 'The Lamp is a multi-faceted complex with Lamp books being just one part of the complex. Upstairs there is a beautiful bed and breakfast which overlooks the town. Next door is the Bitte cafe which is connected to lamp books through a door so feel free to grab a coffee and come and sit down with it iin Lamp books. and finally behind lamp books is the Lamp caravann stop. feel free to book online or come instore to Lamp books to book a spot.', ' The Lamp is a historic building owed by Kylie Gunn. Kylie is a key part of helping Lamp books stay afloat, she took the business on when it went under and moved the business into the Lamp complex which was truly a blessing.             Lisa is the manager of the bookshop and currently being down on staff, Lisa runs the sshow at Lamp books majority of the time. She has extensive knowledge of christian books and the bible and is always happy to help. '),
+(2, 'Contact', 'Lamp contact details', ' Are you a regular customer? Fillout here to be added to the regulars list and be informed on whats going on at The Lamp.', '', 'Contact Form', 'Contact Lamp Bookshop through our email address:<br>         Our phone number: 027 222 8228<br>         Or come in store at 595 MacKay Street, Thames 3500', '');
 
 -- --------------------------------------------------------
 
