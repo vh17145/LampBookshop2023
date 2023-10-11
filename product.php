@@ -105,7 +105,7 @@ if (isset($_SESSION['loggedin'])) {
   <p class="price">$<?php echo $price; ?></p>
   <p><?php echo $info; ?></p>
      
-     <form method="post" action="cart.php">
+     <form method="post" action="buynow.php">
 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 <input type="hidden" name="title" value="<?php echo $row['title']; ?>">
 <input type="hidden" name="price" value="<?php echo $row['price']; ?>">

@@ -16,7 +16,7 @@
             <div class="navbar">
 <ul>
     <li><a href="phplogin/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
-    <li><a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a></li>
+    <li><a href="cart.php"><i class="fas fa-user-circle"></i>Cart</a></li>
     <li class="dropdown">
     <a href="products.php" class="dropbtn">Products</a>
     <div class="dropdown-content">

@@ -123,15 +123,15 @@ mysqli_stmt_close($stmt);
         <?php
         
             
-if (isset($_SESSION['added'])) {
-    $title = $_SESSION['title'];
-    $_SESSION['added'] = FALSE;
+//if (isset($_SESSION['added'])) {
+    //$title = $_SESSION['title'];
+    //$_SESSION['added'] = FALSE;
         
 
-    echo '<script>';
-    echo 'alert("Purchase successfully saved!");'; // You can use a more advanced popup/modal library here
-    echo '</script>';
-}
+    //echo '<script>';
+    //echo 'alert("Purchase successfully saved!");'; // You can use a more advanced popup/modal library here
+    //echo '</script>';
+//}
     ?>
         
     </body>
