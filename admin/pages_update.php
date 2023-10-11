@@ -1,22 +1,24 @@
 <?php
 // Include the setup.php file to establish database connection
-require_once 'setup.php';
+require_once '../setup.php';
 // Check if the form is submitted
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     
     // Check if all required form fields are filled
-    if(isset($_POST['id'], $_POST['fname'], $_POST['lname'], $_POST['email'], $_POST['comment'])) {
+    if(isset($_POST['id'], $_POST['page_name'], $_POST['title1'], $_POST['title2'], $_POST['text2'], $_POST['text3'], $_POST['image1'])) {
         $id = $_POST['id'];
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $email = $_POST['email'];
-        $comment = $_POST['comment'];
+        $page_name = $_POST['page_name'];
+        $title1 = $_POST['title1'];
+        $title2 = $_POST['title2'];
+        $text2 = $_POST['text2'];
+        $text3 = $_POST['text3'];
+        $image1 = $_POST['image1'];
 
                 // Update the record in the "contacts" table
-        $query = "UPDATE contact SET fname = ?, lname = ?, email = ?, comment = ? WHERE id = ?";
+        $query = "UPDATE pages SET page_name = ?, title1 = ?, title2 = ?, text2 = ?, text3 = ?, image1 = ? WHERE id = ?";
         $stmt = mysqli_prepare($conn, $query);
-        mysqli_stmt_bind_param($stmt, "ssssi", $fname, $lname, $email, $comment, $id);
+        mysqli_stmt_bind_param($stmt, "ssssssi", $page_name, $title1, $title2, $text2, $text3, $image1, $id);
 
                 if(mysqli_stmt_execute($stmt)) {
             header('Location: admin.php');

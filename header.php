@@ -21,9 +21,9 @@
     <li class="dropdown">
     <a href="products.php" class="dropbtn">Products</a>
     <div class="dropdown-content">
-     <a href="gallery.php?category=book">Books</a>
-      <a href="gallery.php?category=gifts">Gifts</a>
-      <a href="gallery.php?category=jewelry">Jewelry</a>
+     <a href="products.php?category=book">Books</a>
+      <a href="products.php?category=gifts">Gifts</a>
+      <a href="products.php?category=jewelry">Jewelry</a>
     
     </div>
          

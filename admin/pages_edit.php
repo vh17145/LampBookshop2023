@@ -24,9 +24,10 @@ if (!isset($_SESSION['loggedin'])) {
     <body>
      
     
-    
-   <?php 
-        
+     <?php 
+        //<!-- Using php to link the header into the page -->
+   
+// If the user is not logged in redirect to the login page...
 if (isset($_SESSION['loggedin'])) {
     $name = $_SESSION['name'];
      if ($_SESSION['name'] == 'admin'){
@@ -37,8 +38,7 @@ if (isset($_SESSION['loggedin'])) {
 }
         else{
         include 'header.php';}
-        ?><!-- Using php to link the header into the page -->
-        
+        ?>
          <div class="row">
        
        <div class="main">
@@ -77,8 +77,9 @@ mysqli_close($conn);
 
         ?>
 
+
 <h2>Edit Contact</h2>
-<form method="post" action="update.php">
+<form method="post" action="pages_update.php">
 <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 <label for="page_name">Page Name:</label>
 <input type="text" id="page_name" name="page_name" value="<?php echo $row['page_name']; ?>"><br><br>
@@ -103,9 +104,6 @@ mysqli_close($conn);
     
 <input type="submit" value="Update">
 </form>
-           
-           
-       
              
              </div>
      
@@ -118,3 +116,4 @@ mysqli_close($conn);
     </body>
     </div>
 </html>
+

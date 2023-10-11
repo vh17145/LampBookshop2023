@@ -1,6 +1,6 @@
 <?php
 // Include the setup.php file to establish database connection
-require_once 'setup.php';
+require_once '../setup.php';
 // Check if the form is submitted
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     
